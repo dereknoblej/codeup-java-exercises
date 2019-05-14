@@ -46,6 +46,27 @@ public class ControlFlowExercises {
         }
         System.out.format("+-----------------+------+%n");
 
+        System.out.println("Please enter your grade.");
+        int userGrade = sc.nextInt();
+        if(userGrade >= 88){
+            System.out.printf("%d is an A", userGrade);
+        }
+        if (userGrade >= 80 && userGrade <= 87){
+            System.out.printf("%d is a B", userGrade);
+        }
+        if (userGrade >= 67 && userGrade <= 79){
+            System.out.printf("%d is a C", userGrade);
+        }
+        if (userGrade >= 60 && userGrade <= 66){
+            System.out.printf("%d is a D", userGrade);
+        }
+        if (userGrade <= 59){
+            System.out.printf("%d is a F", userGrade);
+        }
+
+
+
+
 
     }
 }
