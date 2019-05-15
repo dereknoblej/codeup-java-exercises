@@ -2,10 +2,11 @@ import java.util.Scanner;
 public class MethodsExercises {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-//        System.out.println("Please enter a number between 1 and 10");
-        String userInput = getInteger(1, 10);
-        System.out.println(userInput);
 
+//        String userInput = getInteger(1, 10);
+//        System.out.println(userInput);
+            long num = factorial(3);
+        System.out.println(num);
 
 
 //            System.out.println(timesThree(3));
@@ -24,6 +25,36 @@ public class MethodsExercises {
            return String.format("You number %d is not between %d and %d", userNumber, min, max);
         }
     }
+    public static boolean betweenOneAndTen(int x){
+        if (x > 0 && x < 11){
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public static long factorial(int x) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter a number between 1 and 10");
+        int num = sc.nextInt();
+        System.out.printf("This is your number %d, would you like to continue", num);
+        String confirm = sc.next();
+        if (confirm.equals("yes")) {
+        if (betweenOneAndTen(num)) {
+            long fac = 1;
+            for(int i = 2; i <= num; i++ ){
+
+                fac = fac * i;
+                System.out.println(fac);
+                if(i+1 == num){
+                    return fac * num;
+                }
+            }
+            } else {return 0;}
+
+        } else { return 0; }
+        return 0;
+    }
+
 
 
 
