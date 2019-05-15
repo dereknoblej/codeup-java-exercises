@@ -3,16 +3,20 @@ import java.util.Random;
 public class MethodsExercises {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("How many sided dice?");
-        int num = sc.nextInt();
-        System.out.println("Would you like to roll the dice?");
-        String answer = sc.next();
-        if (answer.equals("yes")){
-            System.out.println(diceOne(num));
-            System.out.println(diceTwo(num));
-        } else {
-            System.out.println("ok");
-        }
+        Random rand = new Random();
+        int randNum = rand.nextInt(100);
+        System.out.println(randNum);
+        System.out.println(gameOfThrones(randNum));
+//        System.out.println("How many sided dice?");
+//        int num = sc.nextInt();
+//        System.out.println("Would you like to roll the dice?");
+//        String answer = sc.next();
+//        if (answer.equals("yes")){
+//            System.out.println(diceOne(num));
+//            System.out.println(diceTwo(num));
+//        } else {
+//            System.out.println("ok");
+//        }
 
 //        String userInput = getInteger(1, 10);
 //        System.out.println(userInput);
@@ -37,7 +41,22 @@ public class MethodsExercises {
         Random rand = new Random();
         return rand.nextInt(x);
     }
-
+    public static String gameOfThrones(int randNum){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please guess a number 1-100");
+        int x = sc.nextInt();
+        if (x > randNum){
+            System.out.println("LOWER");
+            gameOfThrones(randNum);
+        }
+        if(x == randNum){
+            return "GOOD GUESS";
+        } else {
+            System.out.println("Higher, guess again");
+            gameOfThrones(randNum);
+        }
+    return "X";
+    }
 
 
 
