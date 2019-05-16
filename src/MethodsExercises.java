@@ -42,20 +42,21 @@ public class MethodsExercises {
         return rand.nextInt(x);
     }
     public static String gameOfThrones(int randNum){
+        System.out.println(randNum);
         Scanner sc = new Scanner(System.in);
         System.out.println("Please guess a number 1-100");
         int x = sc.nextInt();
         if (x > randNum){
             System.out.println("LOWER");
-            gameOfThrones(randNum);
-        }
-        if(x == randNum){
+           return gameOfThrones(randNum);
+        } else if(x == randNum){
             return "GOOD GUESS";
-        } else {
+        } else if (x < randNum) {
             System.out.println("Higher, guess again");
-            gameOfThrones(randNum);
+           return gameOfThrones(randNum);
+        } else{
+            return "X";
         }
-    return "X";
     }
 
 
