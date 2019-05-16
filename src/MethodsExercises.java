@@ -3,10 +3,10 @@ import java.util.Random;
 public class MethodsExercises {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Random rand = new Random();
-        int randNum = rand.nextInt(100);
-//        System.out.println(randNum);
-        System.out.println(gameOfThrones(randNum, 0));
+//        Random rand = new Random();
+//        int randNum = rand.nextInt(100);
+////        System.out.println(randNum);
+//        System.out.println(gameOfThrones(randNum, 0));
 //        System.out.println("How many sided dice?");
 //        int num = sc.nextInt();
 //        System.out.println("Would you like to roll the dice?");
@@ -23,8 +23,9 @@ public class MethodsExercises {
 //            long num = factorial(3);
 //        System.out.println(num);
 
-
-//            System.out.println(timesThree(3));
+        System.out.println("Give me a number");
+        int myNumber = sc.nextInt();
+            System.out.println(timesThree(myNumber));
 //        System.out.println(additionTwo(2));
 //        System.out.println(subtractionOne(4));
 //        System.out.println(divisionTwo(6));
@@ -139,9 +140,15 @@ public class MethodsExercises {
 //    public static int subtractionOne (int x){
 //        return x - 1;
 //    }
-//    public  static int timesThree(int num){
-//        return num * 3;
-//    }
+    public  static int timesThree(int num){
+        int i = 0;
+        int answer = 0;
+        while (i < 3){
+            answer += num;
+            i++;
+        }
+        return answer;
+    }
 //    public static int divisionTwo(int x){
 //        return x / 2;
 //    }
