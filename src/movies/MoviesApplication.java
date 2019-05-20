@@ -1,4 +1,5 @@
 package movies;
+import java.util.Arrays;
 import java.util.Scanner;
 import java.lang.reflect.Array;
 
@@ -52,5 +53,15 @@ public class MoviesApplication {
             }
         }
         return movies;
+    }
+    public static void addMovie(){
+        Movie[] movie = MoviesArray.findAll();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("What is the title of the movie you would like to add?");
+        String title = sc.nextLine();
+        System.out.println("What is the category of the movie you just entered?");
+        String category = sc.next();
+        Movie[] newList = Arrays.copyOf(movie, movie.length + 1);
+        newList[newList.length - 1] = new Movie(title,category);
     }
 }
