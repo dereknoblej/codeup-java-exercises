@@ -11,14 +11,14 @@ public class ArraysExercises {
         id[2] = new Person("Nick");
 
         System.out.println(id[2].getName());
-        System.out.println(addPerson(id, new Person("Jack")));
+        addPerson(id, new Person("Jack"));
 
 
     }
-    public static String addPerson(Person[] id, Person jack){
-        Person[] newId = Arrays.copyOf(id , id.length);
+    public static Person[] addPerson(Person[] id, Person jack){
+        Person[] newId = Arrays.copyOf(id , id.length + 1);
         newId[newId.length - 1] = jack;
-        return  newId[newId.length - 1].getName();
+        return  newId;
     }
 
 }
