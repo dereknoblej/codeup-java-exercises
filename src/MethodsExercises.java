@@ -46,6 +46,7 @@ public class MethodsExercises {
 //        System.out.println(randNum);
         System.out.printf("You have made %d guesses%n", i);
         Scanner sc = new Scanner(System.in);
+        sc.nextLine();
         System.out.println("Please guess a number 1-100");
         int x = sc.nextInt();
         if (x > randNum){
