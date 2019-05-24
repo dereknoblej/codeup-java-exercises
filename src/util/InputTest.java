@@ -5,7 +5,7 @@ public class InputTest {
 
     Input test = new Input();
 
-    test.getInt(1,100);
+//    test.getInt(1,100);
 
         System.out.println(test.getDouble(100,200));
 

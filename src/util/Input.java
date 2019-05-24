@@ -19,21 +19,33 @@ public class Input {
         }
       public int getInt(int min, int max){
           System.out.printf("Please enter a number between %d and %d", min, max);
-          int userNumber = Integer.parseInt(scanner.nextLine());
+          try {
+              int userNumber = Integer.valueOf(scanner.nextLine());
+
           if(userNumber > min && userNumber < max){
               return userNumber;
           } else {
               return getInt(min,max);
+          }} catch (NumberFormatException e){
+              System.out.println("Number not entered");
+              e.printStackTrace();
+              return getInt(min, max);
           }
       }
       public double getDouble(double min, double max){
           System.out.printf("Please enter a number between %f and %f", min, max);
-          double userNumber = Double.parseDouble(scanner.nextLine());
+         try  {
+          double userNumber = Double.valueOf(scanner.nextLine());
           if(userNumber > min && userNumber < max){
+              Double.valueOf(userNumber);
               return userNumber;
           } else    {
               return getDouble(min,max);
-          }
+          }}catch (NumberFormatException e){
+             System.out.println("Double was not entered");
+             e.printStackTrace();
+             return getDouble(min,max);
+         }
       }
 
 }
