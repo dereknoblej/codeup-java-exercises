@@ -47,6 +47,9 @@ public class Input {
              return getDouble(min,max);
          }
       }
+      public void getBinary(int number){
+          binary.valueof(number);
+      }
 
 }
 
