@@ -7,5 +7,6 @@ public class ShapesTest {
         Measurable myShape2 = new Rectangle(5,6);
 
         System.out.println(myShape1.getPerimeter());
+        System.out.println(myShape2.getPerimeter());
     }
 }

@@ -48,7 +48,7 @@ public class Input {
          }
       }
       public void getBinary(int number){
-          binary.valueof(number);
+
       }
 
 }
